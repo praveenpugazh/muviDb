@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { API_KEY } from '../constants'
 import { useQuery } from '@tanstack/react-query'

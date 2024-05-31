@@ -2,7 +2,6 @@ import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { API_KEY } from '../constants'
-import { useState } from 'react'
 
 const SinglePeopleItem = () => {
   const { id } = useParams()
