@@ -1,13 +1,14 @@
 import Header from '../components/Header'
-import SingleMovieItem from '../components/SingleMovieItem'
+import SingleTvItem from '../components/SingleTvItem'
 
 const SingleTvSeries = () => {
   return (
     <div>
       <Header />
-      <SingleMovieItem />
+      <SingleTvItem />
     </div>
   )
 }
 
 export default SingleTvSeries
+
