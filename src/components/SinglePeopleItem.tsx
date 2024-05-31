@@ -14,7 +14,7 @@ const SinglePeopleItem = () => {
   }
 
   const { isLoading, data } = useQuery({
-    queryKey: ['getSingleMovie'],
+    queryKey: ['getSinglePerson'],
     queryFn: () => id && getPersonDetails(id),
     staleTime: 100
   })

@@ -30,7 +30,7 @@ const Home = () => {
     return data
   }
   const { isLoading, data } = useQuery({
-    queryKey: ['data', page],
+    queryKey: ['getData', page],
     queryFn: () => getData(page),
     staleTime: 1000 * 60,
     placeholderData: keepPreviousData
@@ -38,7 +38,11 @@ const Home = () => {
   return (
     <div>
       <Header />
-      {!isLoading ? <MoviesList movies={data.results} /> : <p>Loading....</p>}
+      {!isLoading ? (
+        <MoviesList movies={data.results} isMovie={true} />
+      ) : (
+        <p>Loading....</p>
+      )}
       <Pagination page={page} setPage={setPage} />
     </div>
   )

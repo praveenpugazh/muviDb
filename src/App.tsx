@@ -6,6 +6,7 @@ import SingleMovie from './pages/SingleMovie'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import SinglePerson from './pages/SinglePerson'
+import SingleTvSeries from './pages/SingleTvSeries'
 
 const queryClient = new QueryClient()
 
@@ -22,6 +23,10 @@ function App() {
     {
       path: '/tv',
       element: <TvSeriesHome />
+    },
+    {
+      path: '/tv/:id',
+      element: <SingleTvSeries />
     },
     {
       path: '/persons',
